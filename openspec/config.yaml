@@ -1,0 +1,13 @@
+schema: spec-driven
+
+context: |
+  Public-facing specification set for the VetSpace platform backend.
+  Tech stack: PHP 8.5, Laravel 13, PostgreSQL 18 (hybrid database/schema per-tenant via stancl/tenancy v3),
+  Redis (Horizon), Filament v5 admin, Lighthouse (GraphQL), Sanctum, Cashier (Stripe).
+  The application source code is private; specs reference documentation artefacts in this repository only.
+
+rules:
+  specs:
+    - Every spec must start with OKF frontmatter containing type, title, description, domain, tags, status, last_verified_at, and sources.
+    - Sources must reference files inside this repository (docs/, screenshots) — never paths into the private codebase.
+    - Group specs by domain (architecture/, appointments/, notifications/, billing/, auth/, ai/, admin/).
